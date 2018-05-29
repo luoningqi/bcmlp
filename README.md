@@ -18,10 +18,10 @@ Sparse connection has been used both to reduce network complexity and sensitivit
   - Tensorflow 1.4.0
 
 ### Files
-  - bcmlp.py: the proposed model
-  - sensitivity.py: for calculating the BCMLP's sensitivity
-  - Exp*.py and funcs.py: for simulation experiments
-  - model structure and exp reslut are show in ./pics 
+  - bcmlp.py is the proposed model
+  - sensitivity.py is for calculating the BCMLP's sensitivity
+  - Exp*.py and funcs.py are for simulation experiments
+  - model structure and exp results are show in ./pics 
 
 ### Experiment
   - Run ExpSensitivity.py
