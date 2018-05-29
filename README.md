@@ -1,37 +1,35 @@
-# AdasNet
+# bcmlp
 
 ## Info
-**Unsupervised Binocular Depth Perception on Driving Scenario**<br>
-Ningqi Luo', Chengxi Yang", Wenxiu Sun" and Binheng Song'.<br>
-'Tsinghua University, "SenseTime Group Limited.<br>
+**BCMLP: Binary-connected Multilayer Perceptrons**<br>
+Ningqi Luo', Binheng Song", Yinxu Pan', and Bin Shen'.<br>
+'Department of Computer Science, "Graduate School at Shenzhen<br>
+Tsinghua University.<br>
 Email: lnq16@mails.tsinghua.edu.cn<br>
-Submitted to 24th International Conference on Pattern Recognition, [ICPR'2018](http://www.icpr2018.org/)
+Submitted to 25th International Conference on Neural Information Processing, [ICONIP'2018](https://conference.cs.cityu.edu.hk/iconip/)
 
 ## Introduction
-To achive depth perception on drving scenario (i) We construct a CNN-based neural network which takes pairwise stereo images as input and output disparity map of the single left image. The training process of this neural network is not reliant on ground truth disparities. (ii) We propose an occlusion-aware reconstruction loss function. Nowadays the similarity evaluations
-between reconstructed and reference images do not consider of the occlusion area. We design an occlusion module and add it
-into matching loss. (iii) We train our unsupervised model on KITTI Stereo 2012, Stereo 2015, Cityscapes and our self-collected dataset. Trained model is available in [Baiduyun](https://pan.baidu.com/s/1c1GJzna).
+Sparse connection has been used both to reduce network complexity and sensitivity to input perturbations in multilayer perceptrons as well as artificial neural networks. We propose a novel binary-connected multilayer perceptrons where arbitrary node is connected with the only two nodes of previous layer. The sensitivity of this model is discussed both in theoretical methods and simulation experiments. Comparisons with related works show that our scheme achieves the least amount of parameters, the lowest deviation to input perturbations, and the highest accuracy in the noisy classification task.
 
 ## How to Use
 ### Prerequisites
-  - Tensorflow
-  - OpenCv
-  - Download our trained model from [Baiduyun](https://pan.baidu.com/s/1c1GJzna)
+  - Python 3.6.4
+  - numpy 1.14.0
+  - Tensorflow 1.4.0
 
-### Testing
-  - Take stereo images in ./input/left and ./input/right as input
-  - Run test.py
-  - Reslut(disparity, occlusion, warpedLeft) are show in ./output 
+### Files
+  - bcmlp.py: the proposed model
+  - sensitivity.py: for calculating the BCMLP's sensitivity
+  - Exp*.py and funcs.py: for simulation experiments
+  - model structure and exp reslut are show in ./pics 
 
-### Training
-  - Adjust loadData.py to fit dataset location
-  - Load trained model
-  - Run train.py
-  - Save models (checkpoint) in ./models
+### Experiment
+  - Run ExpSensitivity.py
+  - Run ExpClassification.py
 
 ## Related work
-C. Godard, O. Mac Aodha, and G. J. Brostow, “Unsupervised monocular depth estimation with left-right consistency,” in Proc. of the IEEE Conference on Computer Vision and Pattern Recognition, CVPR, pages 279–270, 2016. [Github](https://github.com/mrharicot/monodepth)<br>
-Y. Zhong, Y. Dai, and H. Li, “Self-supervised learning for stereo matching with self-improcing ability,” in arXiv preprint arXiv: 1709.00930, 2017.
+Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., Salakhutdinov, R.: Dropout: A simple way to prevent neural networks from overfitting. The Journal of Machine Learning Research, 15(1), 1929-1958 (2014). [Github](https://github.com/mdenil/dropout)<br>
+Locally_connected_layer, Keras Documentation. [Keras](http://keras-cn.readthedocs.io/en/latest/layers/locally_connected_layer/)<br>
 
 ## Acknowledgment
-We gratefully acknowledge the support from department of data acquisition in SenseTime Group Limited for providing driving dataset. This work is supported by Tsinghua-Sensetime practice base.
+We gratefully acknowledge the support from department of computer science, Tsinghua University. This work is supported by Tsinghua Multimedia Lab-SZ.
