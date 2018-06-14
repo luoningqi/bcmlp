@@ -24,8 +24,8 @@ Sparse connection has been used both to reduce network complexity and sensitivit
   - model structure and exp results are show in **./pics** 
 
 ### Experiment
-  - Run **ExpSensitivity.py**
-  - Run **ExpClassification.py**
+  - run **ExpSensitivity.py**
+  - run **ExpClassification.py**
 
 ## Related work
 Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., Salakhutdinov, R.: Dropout: A simple way to prevent neural networks from overfitting. The Journal of Machine Learning Research, 15(1), 1929-1958 (2014). [Github](https://github.com/mdenil/dropout)<br>
