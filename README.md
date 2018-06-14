@@ -9,7 +9,7 @@ Email: lnq16@mails.tsinghua.edu.cn<br>
 Submitted to 25th International Conference on Neural Information Processing, [ICONIP'2018](https://conference.cs.cityu.edu.hk/iconip/)
 
 ## Introduction
-Sparse connection has been used both to reduce network complexity and sensitivity to input perturbations in multilayer perceptrons as well as artificial neural networks. We propose a novel binary-connected multilayer perceptrons where arbitrary node is connected with the only two nodes of previous layer. The sensitivity of this model is discussed both in theoretical methods and simulation experiments. Comparisons with related works show that our scheme achieves the least amount of parameters, the lowest deviation to input perturbations, and the highest accuracy in the noisy classification task.
+Sparse connection has been used both to reduce network complexity and sensitivity with input perturbations in multilayer perceptrons as well as artificial neural networks. We propose a novel binary-connected multilayer perceptrons where arbitrary node is connected with the only two nodes of previous layer. The sensitivity of this model is discussed both in theoretical methods and simulation experiments. Comparisons with related works show that our scheme achieves the least amount of parameters, the lowest deviation to input perturbations, and the highest accuracy in the noisy classification task.
 
 ## How to Use
 ### Prerequisites
@@ -18,14 +18,14 @@ Sparse connection has been used both to reduce network complexity and sensitivit
   - Tensorflow 1.4.0
 
 ### Files
-  - bcmlp.py is the proposed model
-  - sensitivity.py is for calculating the BCMLP's sensitivity
-  - Exp*.py and funcs.py are for simulation experiments
-  - model structure and exp results are show in ./pics 
+  - **bcmlp.py** is the proposed model
+  - **sensitivity.py** is for calculating the BCMLP's sensitivity
+  - **Exp*.py** and **funcs.py** are for simulation experiments
+  - model structure and exp results are show in **./pics** 
 
 ### Experiment
-  - Run ExpSensitivity.py
-  - Run ExpClassification.py
+  - Run **ExpSensitivity.py**
+  - Run **ExpClassification.py**
 
 ## Related work
 Srivastava, N., Hinton, G., Krizhevsky, A., Sutskever, I., Salakhutdinov, R.: Dropout: A simple way to prevent neural networks from overfitting. The Journal of Machine Learning Research, 15(1), 1929-1958 (2014). [Github](https://github.com/mdenil/dropout)<br>
