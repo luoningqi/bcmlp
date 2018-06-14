@@ -20,7 +20,7 @@ Sparse connection has been used both to reduce network complexity and sensitivit
 ### Files
   - **bcmlp.py** is the proposed model
   - **sensitivity.py** is for calculating the BCMLP's sensitivity
-  - **Exp*.py** and **funcs.py** are for simulation experiments
+  - **Exp.py** and **funcs.py** are for simulation experiments
   - model structure and exp results are show in **./pics** 
 
 ### Experiment
